@@ -7,6 +7,7 @@ const getBooks = (request, response) => {
 	})
 	.catch((e) => {
 	  response.status(500).send(e.message);
+	  response.status(404).send(e.message)
 	});
 }
 
@@ -18,6 +19,7 @@ const getBook = (request, response) => {
 	  })
 	  .catch((e) => {
 		 response.status(500).send(e.message);
+		 response.status(404).send(e.message)
 	  });
 }
 
@@ -27,6 +29,7 @@ const createBook = (request, response) => {
 	  response.status(201).send(book);
 	})
 	.catch((e) => {
+	  response.status(404).send(e.message)
 	  response.status(500).send(e.message);
 	});
 }
@@ -38,7 +41,8 @@ const updateBook = (request, response) => {
 		 response.status(200).send(book);
 	  })
 	  .catch((e) => {
-		 response.status(500).send(e.message);
+	  response.status(404).send(e.message)
+	  response.status(500).send(e.message);
 	  });
 }
 
@@ -49,7 +53,8 @@ const deleteBook = (request, response) => {
 		 response.status(200).send("Success");
 	  })
 	  .catch((e) => {
-		 response.status(500).send(e.message);
+	  response.status(404).send(e.message)
+	  response.status(500).send(e.message);
 	  });
 }
 

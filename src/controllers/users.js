@@ -6,6 +6,7 @@ const getUsers = (request, response) => {
 	  response.status(200).send(data);
 	})
 	.catch((e) => {
+	  response.status(404).send(e.message)
 	  response.status(500).send(e.message);
 	});
 }
@@ -17,7 +18,8 @@ const getUser = (request, response) => {
 		 response.status(200).send(user);
 	  })
 	  .catch((e) => {
-		 response.status(500).send(e.message);
+	  response.status(404).send(e.message)
+	  response.status(500).send(e.message);
 	  });
 }
 
@@ -27,6 +29,7 @@ const createUser = (request, response) => {
 	  response.status(201).send(user);
 	})
 	.catch((e) => {
+	  response.status(404).send(e.message)
 	  response.status(500).send(e.message);
 	});
 }
@@ -38,7 +41,8 @@ const updateUser = (request, response) => {
 		 response.status(200).send(user);
 	  })
 	  .catch((e) => {
-		 response.status(500).send(e.message);
+	  response.status(404).send(e.message)
+	  response.status(500).send(e.message);
 	  });
 }
 
@@ -49,7 +53,8 @@ const deleteUser = (request, response) => {
 		 response.status(200).send("Success");
 	  })
 	  .catch((e) => {
-		 response.status(500).send(e.message);
+	  response.status(404).send(e.message)
+	  response.status(500).send(e.message);
 	  });
 }
 

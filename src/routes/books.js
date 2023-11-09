@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const loggerUrl = require("../middlewares/loggerUrl");
+
 const {
 	getBooks,
 	getBook,
@@ -7,6 +9,7 @@ const {
 	deleteBook
  } = require("../controllers/books");
 
+router.use(loggerUrl);
 
 router.get("/books", getBooks);
 router.get("/books/:book_id", getBook);
