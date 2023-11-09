@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 const userRouter = require("./routes/users");
 const bookRouter = require("./routes/books");
-const loggerOne = require("./middlewares/loggerOne");
 const bodyParser = require("body-parser");
 const cors = require('cors')
 const mongoose = require("mongoose");
@@ -24,7 +23,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(userRouter);
 app.use(bookRouter);
-app.use(loggerOne);
 app.use(cors());
 
 
