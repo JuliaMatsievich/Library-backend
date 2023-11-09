@@ -10,6 +10,11 @@ const bookSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		minLength: 2
+	},
+	year: {
+		type: String,
+		required: true,
+		minLength: 2
 	}
 })
 
