@@ -12,9 +12,8 @@ const bookSchema = new mongoose.Schema({
 		minLength: 2
 	},
 	year: {
-		type: String,
+		type: Number,
 		required: true,
-		minLength: 2
 	}
 })
 
